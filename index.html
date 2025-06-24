@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newvasha Real Estate</title>
+    <title>Newvasha - Property Development & Investment</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -13,6 +13,18 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer/0.4.8/odometer.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/odometer/0.4.8/themes/odometer-theme-default.min.css"
+    />
   </head>
   <body>
     <!-- Header Section -->
@@ -20,30 +32,35 @@
       <div class="top-bar">
         <div class="container">
           <div class="contact-info">
-            <span><i class="fas fa-phone"></i> (+1) 123 456 789</span>
-            <span><i class="fas fa-envelope"></i> hello@newvasha.com</span>
+            <span><i class="fas fa-phone"></i> +254 722 608220</span>
+            <span><i class="fas fa-envelope"></i> Info@newvashaepz.com</span>
+            <span><i class="fas fa-map-marker-alt"></i> Naivasha, Kenya</span>
           </div>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
       <nav class="main-nav">
         <div class="container">
           <div class="logo">
-            <img src="https://isopanelscu.files.wordpress.com/2024/03/logo.png" alt="">
+            <img
+              src="https://isopanelscu.files.wordpress.com/2024/03/logo.png"
+              alt=""
+            />
           </div>
           <ul class="nav-links">
             <li><a href="/" class="active">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Real Estate</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="#">Develop</a></li>
+            <li><a href="#">Properties</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <button class="quote-btn">Get a Quote</button>
+          <button class="quote-btn">Invest Now</button>
         </div>
       </nav>
     </header>
@@ -52,67 +69,154 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Let's Be The One</h1>
-          <h2>Our Brand Partner • Property Agent • B2B Partnership</h2>
+          <h1>DEVELOP WITH US</h1>
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h2>Property Development</h2>
+              </div>
+              <div class="swiper-slide">
+                <h2>Leasing & Sales</h2>
+              </div>
+              <div class="swiper-slide">
+                <h2>Land & Investment</h2>
+              </div>
+            </div>
+          </div>
+          <div class="doted-line">
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+          </div>
           <p>
-            Your trusted partner in real estate development, creating
-            exceptional properties and lasting value.
+            Newvasha is your trusted partner for property development, leasing,
+            property sales, and land investment in Naivasha and beyond. Discover
+            modern living, business, and investment opportunities with us.
           </p>
           <form class="hero-form">
             <input type="email" placeholder="Your Email" />
             <select>
               <option>Choose Service</option>
-              <option>Brand Partnership</option>
-              <option>B2B Business</option>
-              <option>Agent Property</option>
-              <option>Other</option>
+              <option>Property Development</option>
+              <option>Leasing</option>
+              <option>Property Sales</option>
+              <option>Land Investment</option>
             </select>
-            <button type="submit">Get a Quote</button>
+            <button type="submit">Get Started</button>
           </form>
         </div>
         <div class="stats-container">
           <div class="stat-box">
-            <h3>150+</h3>
-            <p>Brand Partner</p>
+            <h3 class="odometer" data-target="50">0</h3>
+            <p>Properties Developed</p>
           </div>
           <div class="stat-box">
-            <h3>300+</h3>
-            <p>Our Agent</p>
+            <h3 class="odometer" data-target="200">0</h3>
+            <p>Acres Available</p>
           </div>
           <div class="stat-box">
-            <h3>450+</h3>
-            <p>Building Ready</p>
+            <h3 class="odometer" data-target="300">0</h3>
+            <p>Happy Clients</p>
           </div>
         </div>
       </div>
     </section>
 
+    <script>
+      const swiper = new Swiper(".hero-swiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+
+      // Odometer functionality
+      function animateOdometer() {
+        const odometers = document.querySelectorAll(".odometer");
+
+        odometers.forEach((odometer) => {
+          const target = parseInt(odometer.getAttribute("data-target"));
+          const duration = 2000; // 2 seconds
+          const increment = target / (duration / 16); // 60fps
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            odometer.textContent = Math.floor(current) + "+";
+          }, 16);
+        });
+      }
+
+      // Trigger animation when hero section is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateOdometer();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      const heroSection = document.querySelector(".hero");
+      if (heroSection) {
+        observer.observe(heroSection);
+      }
+    </script>
+
     <!-- About Section -->
     <section class="about">
       <div class="container">
-        <div class="about-content">
-          <div class="section-header">
-            <span class="subtitle">Who We Are</span>
-            <h2>We Are Professional Real Estate Builders</h2>
+        <div class="section-header">
+          <span class="subtitle">Who We Are</span>
+          <h2>Newvasha - Leading Property Developers</h2>
+          <div class="doted-line">
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
           </div>
-          <p>
-            With over 15 years of experience in handling high-class building
-            projects, we've established ourselves as industry leaders in real
-            estate development.
-          </p>
-          <ul class="features-list">
-            <li>Premium quality construction materials</li>
-            <li>Expert team of professionals</li>
-            <li>On-time project delivery</li>
-          </ul>
-          <button class="learn-more">Learn More</button>
         </div>
-        <div class="about-video">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Real Estate Building"
-          />
-          <button class="play-btn"><i class="fas fa-play"></i></button>
+        <div class="grid">
+          <div class="about-content">
+            <p>
+              Newvasha is a premier property developer in Naivasha, Kenya,
+              specializing in property development, leasing, property sales, and
+              land investment. Our diverse portfolio includes residential,
+              commercial, and industrial projects, as well as land for sale and
+              lease.
+            </p>
+            <p>
+              We turn visions into reality through meticulous planning,
+              innovative design, and quality construction. Whether you're
+              looking to buy, lease, or invest, Newvasha offers tailored
+              solutions to meet your needs and aspirations.
+            </p>
+            <ul class="features-list">
+              <li>Residential, commercial, and industrial properties</li>
+              <li>Land for sale and lease</li>
+              <li>Flexible investment and ownership options</li>
+            </ul>
+            <button class="learn-more"><a href="/about">Learn More</a></button>
+          </div>
+          <div class="about-video">
+            <img
+              src="https://img.freepik.com/free-photo/working-housing-project_1098-17511.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+              alt="Real Estate Building"
+            />
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
         </div>
       </div>
     </section>
@@ -121,36 +225,42 @@
     <section class="services">
       <div class="container">
         <div class="section-header">
-          <span class="subtitle">What We Can Do</span>
-          <h2>Our Services Provide</h2>
+          <span class="subtitle">What We Offer</span>
+          <h2>Our Core Services</h2>
+          <div class="doted-line">
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+          </div>
         </div>
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card one">
             <i class="fas fa-building"></i>
-            <h3>Business Office</h3>
+            <h3>Property Development</h3>
             <p>
-              Premium office spaces designed for modern businesses with
-              state-of-the-art amenities.
+              Comprehensive development of residential, commercial, and
+              industrial properties, from concept to completion.
             </p>
-            <a href="#" class="service-link">Get a Quote</a>
+            <button class="service-link"><a href="#">Learn More</a></button>
           </div>
-          <div class="service-card">
+          <div class="service-card three">
             <i class="fas fa-home"></i>
-            <h3>House Building</h3>
+            <h3>Property Sales & Leasing</h3>
             <p>
-              Custom residential properties built to the highest standards of
-              quality and comfort.
+              Buy or lease your dream property from our diverse portfolio of
+              homes, commercial buildings, and more.
             </p>
-            <a href="#" class="service-link">Get a Quote</a>
+            <button class="service-link"><a href="#">Learn More</a></button>
           </div>
-          <div class="service-card">
-            <i class="fas fa-city"></i>
-            <h3>Mega Building</h3>
+          <div class="service-card four">
+            <i class="fas fa-map"></i>
+            <h3>Land Investment</h3>
             <p>
-              Large-scale commercial and residential complexes for urban
-              development.
+              Invest in prime land for development, agriculture, or future
+              growth in strategic locations.
             </p>
-            <a href="#" class="service-link">Get a Quote</a>
+            <button class="service-link"><a href="#">Learn More</a></button>
           </div>
         </div>
       </div>
@@ -160,11 +270,21 @@
     <section class="commission">
       <div class="container">
         <div class="section-header text-center">
-          <h2>High Commission Member</h2>
-          <h3>Be a Part Of Our Member Partner & Get More High Income</h3>
+          <h2>Strategic Location</h2>
+          <h3>WHAT MAKES NEWVASHA A GREAT LOCATION</h3>
+
+          <div class="doted-line">
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+          </div>
         </div>
         <div class="commission-cta">
-          <button class="join-btn">Let's Join Now</button>
+          <button class="join-btn">
+            <a href="#">Explore Location</a>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -172,44 +292,104 @@
     <!-- Why Choose Us Section -->
     <section class="why-choose">
       <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Why Choose Us</span>
+          <h2>Our Advantage</h2>
+          <div class="doted-line">
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+            <i class="fa-solid fa-window-minimize"></i>
+          </div>
+        </div> 
         <div class="why-choose-grid">
           <div class="why-choose-content">
-            <div class="section-header">
-              <span class="subtitle">Why Choose Us</span>
-              <h2>We Have a Great Work</h2>
-            </div>
-            <div class="testimonial">
-              <blockquote>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo."
-              </blockquote>
-              <div class="testimonial-author">
-                <span>John Doe</span>
+            <div class="testimonial-wrapper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial">
+                    <blockquote>
+                      "Newvasha delivers quality developments and investment
+                      opportunities, with a focus on client satisfaction, modern
+                      infrastructure, and strategic locations."
+                    </blockquote>
+                    <div class="testimonial-author">
+                      <img
+                        src="https://newvashaepz.com/wp-content/uploads/2025/03/6f4a1-0a0a3531.webp"
+                        alt="John Doe"
+                      />
+                      <div class="testimonial-author-info">
+                        <span>James Waweru</span>
+                        <span>CEO, Newvasha</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial">
+                    <blockquote>
+                      "We offer a wide range of properties and land, with
+                      flexible options for buyers, tenants, and investors."
+                    </blockquote>
+                    <div class="testimonial-author">
+                      <img
+                        src="https://newvashaepz.com/wp-content/uploads/2025/03/a966b-0a0a0081.webp"
+                        alt="John Doe"
+                      />
+                      <div class="testimonial-author-info">
+                        <span>Ngugi Mureithi</span>
+                        <span>Finance and Sales Manager, Newvasha</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
+            <script>
+              new Swiper(".testimonial-wrapper", {
+                pagination: {
+                  el: ".swiper-pagination",
+                },
+                loop: true,
+                autoplay: {
+                  delay: 10000,
+                },
+              });
+            </script>
+
             <div class="features-grid">
               <div class="feature-item">
-                <h4>15 Years Of Experiences</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <i class="fa-solid fa-road"></i>
+                <h4>Modern Infrastructure</h4>
+                <p>
+                  All developments feature quality roads, drainage, and
+                  utilities.
+                </p>
               </div>
               <div class="feature-item">
-                <h4>Good Business Prospectus</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <i class="fa-solid fa-shield"></i>
+                <h4>Secure Communities</h4>
+                <p>24/7 security and surveillance for peace of mind.</p>
               </div>
               <div class="feature-item">
-                <h4>350+ Portfolio Building</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Prime Locations</h4>
+                <p>Strategically located properties and land for every need.</p>
               </div>
               <div class="feature-item">
-                <h4>Legal Business Operational</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <i class="fa-solid fa-handshake"></i>
+                <h4>Flexible Ownership</h4>
+                <p>
+                  Options for buying, leasing, or investing to suit your goals.
+                </p>
               </div>
             </div>
           </div>
           <div class="why-choose-video">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              src="https://img.freepik.com/free-photo/inspector-african-american-worker-factory_1303-30608.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&w=740"
               alt="Why Choose Us"
             />
             <button class="play-btn"><i class="fas fa-play"></i></button>
@@ -222,75 +402,289 @@
     <section class="portfolio">
       <div class="container">
         <div class="section-header text-center">
-          <h2>Featured Building Portfolio</h2>
-          <h3>Let's Discover Our Work</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis.
-          </p>
+          <div class="header-content">
+            <h3>Available Properties</h3>
+            <h2>
+              Explore Our Exclusive Properties, <br />
+              Land & Commercial Spaces
+            </h2>
+            <div class="doted-line">
+              <i class="fa-solid fa-window-minimize"></i>
+              <i class="fa-solid fa-window-minimize"></i>
+              <i class="fa-solid fa-window-minimize"></i>
+              <i class="fa-solid fa-window-minimize"></i>
+            </div>
+          </div>
+          <div class="button-container">
+            <p>
+              Explore our diverse portfolio: modern homes, multi-unit
+              developments, countryside escapes, commercial spaces, and prime
+              land for sale or lease.
+            </p>
+            <button class="portfolio-btn">
+              <a href="#">View All Properties</a>
+            </button>
+          </div>
         </div>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              alt="City Town Building"
-            />
-            <div class="portfolio-content">
-              <h4>City Town Building</h4>
-              <div class="portfolio-features">
-                <div class="feature">
-                  <h5>Full City Town Design</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
+        <div class="swiper portfolio-grid">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide portfolio-item">
+              <img
+                src="https://img.freepik.com/free-photo/3d-rendering-house-model_23-2150799725.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Single-Dwelling Houses"
+              />
+              <div class="portfolio-content">
+                <h4>Single-Family Homes</h4>
+                <p>
+                  Elegant standalone houses designed for families, featuring modern amenities, 
+                  spacious layouts and private gardens.
+                </p>
+                <div class="portfolio-features">
+                  <div class="feature">
+                    <h5>Premium Living Spaces</h5>
+                    <p>
+                      3-4 bedroom homes with master ensuite, modern kitchen, family room,
+                      and outdoor entertainment areas in gated communities.
+                    </p>
+                  </div>
                 </div>
-                <div class="feature">
-                  <h5>Exclusive Materials Used</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
-                <div class="feature">
-                  <h5>Future Building Concepts</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
+                <button class="portfolio-offer">
+                  <span>Contact Now</span>
+                </button>
               </div>
-              <div class="portfolio-offer">
-                <span>20% OFF Today</span>
+            </div>
+
+            <div class="swiper-slide portfolio-item">
+              <img
+                src="https://img.freepik.com/free-photo/analog-landscape-city-with-buildings_23-2149661456.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Multidwelling Units"
+              />
+              <div class="portfolio-content">
+                <h4>Apartment Complexes</h4>
+                <p>
+                  Modern apartment buildings with studio, 1, 2 and 3 bedroom units,
+                  perfect for both residents and property investors.
+                </p>
+                <div class="portfolio-features">
+                  <div class="feature">
+                    <h5>Investment Opportunity</h5>
+                    <p>
+                      Fully serviced apartments with shared amenities, parking, 
+                      24/7 security and professional property management.
+                    </p>
+                  </div>
+                </div>
+                <button class="portfolio-offer">
+                  <span>Contact Now</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper-slide portfolio-item">
+              <img
+                src="https://img.freepik.com/free-photo/3d-electric-car-building_23-2148972401.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Countryside Retreats"
+              />
+              <div class="portfolio-content">
+                <h4>Rural Estates</h4>
+                <p>
+                  Spacious countryside properties on large plots, ideal for those seeking
+                  a peaceful lifestyle away from urban bustle.
+                </p>
+                <div class="portfolio-features">
+                  <div class="feature">
+                    <h5>Nature Living</h5>
+                    <p>
+                      5+ acre estates with farmhouse-style homes, perfect for agriculture,
+                      hobby farming or creating your own private sanctuary.
+                    </p>
+                  </div>
+                </div>
+                <button class="portfolio-offer">
+                  <span>Contact Now</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper-slide portfolio-item">
+              <img
+                src="https://img.freepik.com/free-photo/analog-landscape-city-with-buildings_23-2149661456.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Commercial Properties"
+              />
+              <div class="portfolio-content">
+                <h4>Commercial Properties</h4>
+                <p>
+                  Prime retail spaces, office buildings and industrial units in strategic
+                  locations with excellent connectivity and infrastructure.
+                </p>
+                <div class="portfolio-features">
+                  <div class="feature">
+                    <h5>Business Ready</h5>
+                    <p>
+                      Flexible commercial spaces from 1,000-10,000 sq ft with modern facilities,
+                      ample parking and high-speed internet connectivity.
+                    </p>
+                  </div>
+                </div>
+                <button class="portfolio-offer">
+                  <span>Contact Now</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper-slide portfolio-item">
+              <img
+                src="https://img.freepik.com/free-photo/3d-electric-car-building_23-2148972401.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Development Land"
+              />
+              <div class="portfolio-content">
+                <h4>Development Land</h4>
+                <p>
+                  Ready-to-develop plots in high-growth areas, suitable for residential,
+                  commercial or mixed-use development projects.
+                </p>
+                <div class="portfolio-features">
+                  <div class="feature">
+                    <h5>Investment Ready</h5>
+                    <p>
+                      Fully titled plots with approved development plans, utilities access
+                      and excellent appreciation potential.
+                    </p>
+                  </div>
+                </div>
+                <button class="portfolio-offer">
+                  <span>Contact Now</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
+        <div class="swiper-pagination portfolio-pagination"></div>
+
+        <script>
+          const portfolioSwiper = new Swiper('.portfolio-grid', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+              delay: 10000,
+            },
+            pagination: {
+              el: '.portfolio-pagination',
+              clickable: true,
+            },
+          });
+        </script>
       </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
+    <section class="blog">
       <div class="container">
-        <div class="benefits-grid">
-          <div class="benefits-content">
-            <div class="section-header">
-              <h2>Our Benefits</h2>
-              <h3>Build Your Town House Today With Us Exclusive</h3>
+        <div class="section-header text-center">
+          <div class="header-content">
+            <h3>Latest Updates</h3>
+            <h2>Stay Informed With Our Latest News</h2>
+            <div class="doted-line">
+              <i class="fa-solid fa-window-minimize"></i>
+              <i class="fa-solid fa-window-minimize"></i>
+              <i class="fa-solid fa-window-minimize"></i>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis.
-            </p>
-            <ul class="benefits-list">
-              <li>Nemo enim ipsam voluptatem quia voluptas sit</li>
-              <li>Sed ut perspiciatis unde omnis iste natus error sit</li>
-              <li>Nemo enim ipsam voluptatem quia voluptas sit</li>
-            </ul>
-            <button class="learn-more">Learn More</button>
           </div>
-          <div class="benefits-image">
-            <img
-              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              alt="Benefits"
-            />
+          <div class="button-container">
+            <p>
+              Get the latest on our property launches, land sales, leasing
+              offers, and investment opportunities.
+            </p>
+            <button class="blog-btn">
+              <a href="#">View All News</a>
+            </button>
+          </div>
+        </div>
+
+        <div class="blog-grid">
+          <div class="blog-item">
+            <div class="blog-item-img">
+              <img
+                src="https://img.freepik.com/free-photo/door-opening-revealing-beautiful-city_23-2149768547.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="New Property Launch"
+              />
+            </div>
+            <div class="blog-item-content">
+              <h4>
+                <a href="#">New Residential Project Launch</a>
+              </h4>
+              <p>
+                Discover our latest residential development, featuring modern
+                homes in a secure, well-connected community.
+              </p>
+            </div>
+            <div class="separator"></div>
+            <div class="blog-item-info">
+              <span>
+                <i class="fa-solid fa-user"></i>
+                <span>Newvasha Team</span>
+              </span>
+              <span>
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>2024-02-15</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="blog-item">
+            <div class="blog-item-img">
+              <img
+                src="https://img.freepik.com/free-photo/high-angle-pie-chart-with-cities_52683-98166.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Land Investment"
+              />
+            </div>
+            <div class="blog-item-content">
+              <h4>
+                <a href="#">Prime Land Now Available</a>
+              </h4>
+              <p>
+                Secure your future with our newly listed land parcels, perfect
+                for development, agriculture, or investment.
+              </p>
+            </div>
+            <div class="separator"></div>
+            <div class="blog-item-info">
+              <span>
+                <i class="fa-solid fa-user"></i>
+                <span>Investment Team</span>
+              </span>
+              <span>
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>2024-03-10</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="blog-item">
+            <div class="blog-item-img">
+              <img
+                src="https://img.freepik.com/premium-photo/young-real-estate-agent-worker-working-with-laptop-tablet-table-office-small-house-beside-itxa_1090013-2221.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+                alt="Leasing Offers"
+              />
+            </div>
+            <div class="blog-item-content">
+              <h4><a href="#">Special Leasing Offers for Businesses</a></h4>
+              <p>
+                Take advantage of our flexible leasing options for commercial
+                and industrial spaces in prime locations.
+              </p>
+            </div>
+            <div class="separator"></div>
+            <div class="blog-item-info">
+              <span>
+                <i class="fa-solid fa-user"></i>
+                <span>Leasing Team</span>
+              </span>
+              <span>
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>2024-04-05</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -301,38 +695,44 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-col">
-            <h3>About Us</h3>
+            <h3>About Newvasha</h3>
             <p>
-              Leading real estate developer committed to creating exceptional
-              properties and lasting value for our clients.
+              Newvasha is a leading property developer in Naivasha, Kenya,
+              offering property development, leasing, sales, and land investment
+              opportunities for residential, commercial, and industrial clients.
             </p>
             <div class="footer-social">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
           <div class="footer-col">
             <h3>Quick Links</h3>
             <ul>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Services</a></li>
-              <li><a href="#">Our Pricing</a></li>
+              <li><a href="#">Property Development</a></li>
+              <li><a href="#">Leasing</a></li>
+              <li><a href="#">Property Sales</a></li>
+              <li><a href="#">Land Investment</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h3>Our Services</h3>
             <ul>
-              <li><a href="#">Membership Agent</a></li>
-              <li><a href="#">B2B Partnership</a></li>
-              <li><a href="#">Town House</a></li>
-              <li><a href="#">City Building</a></li>
+              <li><a href="#">Property Development</a></li>
+              <li><a href="#">Leasing</a></li>
+              <li><a href="#">Property Sales</a></li>
+              <li><a href="#">Land Investment</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h3>Newsletter</h3>
-            <p>Subscribe to our newsletter for updates and news.</p>
+            <h3>Contact Information</h3>
+            <p>Naivasha, Kenya</p>
+            <p>+254 722 608220</p>
+            <p>Info@newvashaepz.com</p>
             <form class="footer-form">
               <input type="email" placeholder="Your Email" />
               <button type="submit">Subscribe</button>
@@ -340,7 +740,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Newvasha Real Estate. All rights reserved.</p>
+          <p>&copy; 2025 NEWVASHA DEVELOPERS. All rights reserved.</p>
         </div>
       </div>
     </footer>

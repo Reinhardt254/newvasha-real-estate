@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Newvasha Real Estate</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/about/styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -14,7 +15,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="about-page">
     <!-- Header Section -->
     <header>
       <div class="top-bar">
@@ -25,19 +26,23 @@
           </div>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
       <nav class="main-nav">
         <div class="container">
           <div class="logo">
-            <h1>Newvasha</h1>
+            <img
+              src="https://isopanelscu.files.wordpress.com/2024/03/logo.png"
+              alt=""
+            />
           </div>
           <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#" class="active">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about" class="active">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Real Estate</a></li>
             <li><a href="#">Gallery</a></li>
@@ -49,38 +54,26 @@
     </header>
 
     <!-- Page Title -->
-    <section class="page-title">
+    <section class="hero">
       <div class="container">
-        <h1>About Us</h1>
-        <div class="breadcrumb">
-          <a href="../index.html">Home</a> / <span>About Us</span>
+        <div class="text-container">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a> / <span>About Us</span>
+          </div>
+          <h1>About Us</h1>
+          <p>
+            We are a team of real estate professionals dedicated to providing
+            the best possible service to our clients.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- Video Gallery Section -->
-    <section class="video-gallery">
-      <div class="container">
-        <div class="gallery-grid">
-          <div class="gallery-item main">
-            <img
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
-              alt="Business Team"
-            />
-            <button class="play-btn"><i class="fas fa-play"></i></button>
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
-              alt="Office Building"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
-              alt="Real Estate Team"
-            />
-          </div>
+        <div class="image-container">
+          <img
+            src="https://img.freepik.com/free-photo/mumbai-skyline-skyscrapers-construction_469504-21.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+            alt="About Us"
+          />
+
+          <button class="play-btn"><i class="fas fa-play"></i></button>
         </div>
       </div>
     </section>
@@ -89,31 +82,39 @@
     <section class="who-we-are">
       <div class="container">
         <div class="content-grid">
+          <div class="image-container2">
+            <img
+              src="https://img.freepik.com/premium-photo/happy-family-standing-outside-their-new-home-smiling-talking_14117-894504.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+              alt="About Us"
+            />
+          </div>
           <div class="content-text">
             <span class="subtitle">Who We Are</span>
             <h2>We Are Real Estate Building For Business Needed</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              With over 15 years of experience in handling high-class building
+              projects, we've established ourselves as industry leaders in real
+              estate development. Our proven track record and commitment to
+              excellence have earned us recognition as one of the most trusted
+              names in the construction industry.
+              </p>
+              <p>
+              Our team of experienced professionals is dedicated to delivering
+              high-quality construction projects that meet the needs of our
+              clients. We are committed to providing our clients with the best
+              possible service and support throughout every phase of
+              construction. From initial planning to final completion, we ensure
+              exceptional craftsmanship and attention to detail in everything we
+              do.
             </p>
-            <div class="features">
-              <div class="feature">
-                <h4>15 Years Of Experiences</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="feature">
-                <h4>Exclusive B2B Partner</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <button class="learn-more">Learn More</button>
+            <button class="learn-more"><a href="/about"> Learn More</a></button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Vision Section -->
-    <section class="vision">
+  
+    <!-- <section class="vision">
       <div class="container">
         <div class="section-header">
           <span class="subtitle">Our Vision</span>
@@ -152,57 +153,58 @@
       </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline">
+  
+    <section class="timeline-v2">
       <div class="container">
-        <div class="section-header">
+     <div class="section-header">
           <span class="subtitle">Our Story</span>
-          <h2>We Have Great Business History From Years To Years</h2>
-        </div>
-        <div class="timeline-grid">
-          <div class="timeline-item">
-            <div class="year">1996</div>
-            <div class="content">
-              <h4>First Business Founded</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+          <h2>We Have Great Business History<br>From Years To Years</h2>
+          <div class="timeline-header-divider"></div>
+        </div> 
+        <div class="timeline-v2-wrapper">
+          <div class="timeline-v2-item left">
+            <div class="timeline-v2-content">
+              <div class="timeline-v2-year">1996</div>
+              <div class="timeline-v2-circle"></div>
+              <div>
+                <h4>First Business Founded</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="year">2001</div>
-            <div class="content">
-              <h4>Real Estate Membership</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+          <div class="timeline-v2-item right">
+            <div class="timeline-v2-content">
+              <div class="timeline-v2-year">2001</div>
+              <div class="timeline-v2-circle"></div>
+              <div>
+                <h4>Real Estate Membership</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="year">2005</div>
-            <div class="content">
-              <h4>Go Public IPO Selling</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+          <div class="timeline-v2-item left">
+            <div class="timeline-v2-content">
+              <div class="timeline-v2-year">2005</div>
+              <div class="timeline-v2-circle"></div>
+              <div>
+                <h4>Go Public IPO Selling</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="year">2012</div>
-            <div class="content">
-              <h4>The Biggest Real Estate Business</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+          <div class="timeline-v2-item right">
+            <div class="timeline-v2-content">
+              <div class="timeline-v2-year">2012</div>
+              <div class="timeline-v2-circle"></div>
+              <div>
+                <h4>The Biggest Real Estate Business</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Commission Section -->
     <section class="commission">
@@ -213,17 +215,6 @@
         </div>
         <div class="commission-cta">
           <button class="join-btn">Let's Join Now</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business Section -->
-    <section class="business">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Our Business</h2>
-          <h3>Officials Company Group</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
     </section>
