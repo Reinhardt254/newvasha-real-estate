@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Newvasha Real Estate</title>
+    <link rel="stylesheet" href="/about/styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer/0.4.8/odometer.min.js"></script>
+  </head>
+  <body class="about-page">
+    <!-- Header Section -->
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="contact-info">
+            <span><i class="fas fa-phone"></i> +254 722 608220</span>
+            <span><i class="fas fa-envelope"></i> Info@newvashaepz.com</span>
+            <span><i class="fas fa-map-marker-alt"></i> Naivasha, Kenya</span>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="container">
+          <div class="logo">
+            <img
+              src="https://darkviolet-opossum-928918.hostingersite.com/wp-content/uploads/2025/06/ae61d-newvasha-logo-1.png"
+              alt=""
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/develop">Develop</a></li>
+            <li><a href="/properties">Properties</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="/contact" class="active">Contact</a></li>
+          </ul>
+          <button class="quote-btn">Invest Now</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="hero">
+      <div class="container">
+        <div class="text-container">
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a> / <span>Contact</span>
+          </div>
+          <h1>Contact</h1>
+          <p>
+            We are a team of real estate professionals dedicated to providing
+            the best possible service to our clients.
+          </p>
+        </div>
+
+        <div class="image-container">
+          <img
+            src="https://img.freepik.com/free-photo/mumbai-skyline-skyscrapers-construction_469504-21.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
+            alt="About Us"
+          />
+
+          <button class="play-btn"><i class="fas fa-play"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Fetch the footer content
+      fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          // Insert the footer HTML
+          document.body.insertAdjacentHTML('beforeend', data);
+        })
+        .catch(error => {
+          console.error('Error loading footer:', error);
+        });
+    </script>
+
+    </body>
+    </html>
+
+
