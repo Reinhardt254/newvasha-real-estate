@@ -1,0 +1,264 @@
+/* Contact Section Styles */
+.contact-section {
+  padding: 5rem 0;
+  padding-top: 10rem;
+  background: #f8f9fa;
+}
+
+.contact-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  flex: 1;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container .contact-description {
+  margin-bottom: 30px;
+}
+
+.contact-form-container .contact-description p {
+  color: #666;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s ease;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b8860b;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+}
+
+.send-btn {
+  background: #2d5a3d;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.send-btn:hover {
+  background: #1e3d2a;
+}
+
+/* Contact Information Container */
+.contact-info-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: #b8860b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-info-container h2 {
+  color: #2d5a3d;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 15px 0 20px 0;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: #b8860b;
+  margin-bottom: 25px;
+}
+
+.contact-info-container .contact-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: #b8860b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  color: white;
+  font-size: 20px;
+}
+
+.contact-details h3 {
+  color: #2d5a3d;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.contact-details p {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-info-container {
+    padding-left: 0;
+  }
+
+  .contact-info-container h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-info-container h2 {
+    font-size: 24px;
+  }
+
+  .contact-items {
+    gap: 25px;
+  }
+
+  .contact-item {
+    gap: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-icon i {
+    font-size: 18px;
+  }
+}
+/* ----------------------------------------MAP SECTION---------------------------------------- */
+.map-section {
+  padding: 3rem 0;
+  background-color: var(--white);
+
+  height: 600px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-section .map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-section .map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

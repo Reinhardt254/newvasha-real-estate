@@ -1,0 +1,498 @@
+.develop-page .hero {
+   background: url("https://img.freepik.com/free-photo/mumbai-skyline-skyscrapers-construction_469504-21.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740");
+   background-size: cover;
+   background-position: center;
+   width: 100%;
+   height: 600px;
+   max-height: 100svh;
+   color: var(--white);
+   text-align: center;
+ 
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+ 
+   position: relative;
+ }
+ 
+ .develop-page .hero::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .develop-page .hero .container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+ 
+   width: 100%;
+   height: 100%;
+ 
+   position: relative;
+   z-index: 2;
+ }
+ 
+ .develop-page .hero .text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+ 
+   width: 50%;
+   height: 100%;
+ }
+ 
+ .develop-page .hero h1 {
+   font-size: 48px;
+   margin: 0.5rem 0;
+ }
+ 
+ .develop-page .hero p {
+   font-size: 16px;
+   margin-bottom: 15px;
+   text-align: start;
+ }
+ 
+ .breadcrumb {
+   font-size: 16px;
+ }
+ 
+ .breadcrumb a {
+   color: var(--white);
+   text-decoration: none;
+ }
+ 
+ .breadcrumb span {
+   color: var(--primary-color);
+ }
+ 
+ .develop-page .hero .image-container {
+   width: 500px;
+   height: 500px;
+ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ 
+   border-radius: 10px;
+   overflow: hidden;
+ 
+   margin-bottom: -300px;
+ 
+   position: relative;
+ }
+ 
+ .develop-page .hero .image-container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ 
+ .develop-page .hero .image-container .play-btn {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ /* --------------------------------------Development Estates Section -------------------------------------- 
+ */
+
+ /* Estates Section */
+.estates-section {
+   padding: 6rem 0 2rem 0;
+   background: #f8f9fa;
+ }
+
+ .estates-section-2 {
+   background: var(--white);
+   padding: 4rem 0;
+ }
+
+ .estates-section-3 {
+   background: #f8f9fa;
+   padding: 4rem 0;
+ }
+ 
+ .estates-section .section-header {
+   margin-bottom: 2rem;
+   width: 60%;
+ }
+ 
+ .estates-section .section-header .subtitle {
+   color: var(--primary-color);
+   font-size: 12px;
+   font-weight: 600;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   margin-bottom: 15px;
+   display: block;
+ }
+ 
+ .estates-section .section-header h2 {
+   color: var(--secondary-color);
+   font-size: 42px;
+   font-weight: 600;
+   margin-bottom: 20px;
+   line-height: 1.2;
+   width: 100%;
+ }
+ 
+ .estates-section .section-header p {
+   color: #666;
+   font-size: 1.2rem;
+   max-width: 100%;
+   margin: 0;
+   line-height: 1.6;
+   text-align: start;
+
+   padding-top: 1rem;
+ }
+
+ /* -------------------------------------------------------------------- 
+ */
+ 
+ .estates-grid {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   gap: 2rem;
+   margin-bottom: 0rem;
+
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .estate-card {
+   background: rgba(255, 255, 255, 0);
+   overflow: hidden;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: stretch;
+   align-items: stretch;
+
+   gap: 1rem;
+ }
+
+ 
+ .estate-image {
+   position: relative;
+   height: auto;
+   width: 50%;
+   overflow: hidden;
+
+   border-radius: 15px;
+   overflow: hidden;
+ }
+ 
+ .estate-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+ }
+ 
+ .estate-card:hover .estate-image img {
+   transform: scale(1.05);
+ }
+ 
+ .estate-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-end;
+   padding: 20px;
+ }
+ 
+ .estate-badge {
+   background: var(--primary-color);
+   color: white;
+   padding: 8px 16px;
+   border-radius: 20px;
+   font-size: 12px;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+ }
+ 
+ .estate-content {
+   padding: 1rem;
+
+   width: 50%;
+   height: 100%;
+ }
+ 
+ .estate-header {
+   margin-bottom: 20px;
+ }
+ 
+ .estate-header h3 {
+   color: var(--secondary-color);
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 5px;
+ }
+ 
+ .estate-type {
+   color: var(--primary-color);
+   font-size: 14px;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+ }
+ 
+ .estate-description {
+   color: #666;
+   line-height: 1.6;
+   margin-bottom: 25px;
+ }
+ 
+ .estate-features {
+   margin-bottom: 25px;
+ }
+ 
+ .estate-features h4 {
+   color: var(--secondary-color);
+   font-size: 16px;
+   font-weight: 600;
+   margin-bottom: 15px;
+ }
+ 
+ .estate-features ul {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .estate-features li {
+   color: #666;
+   margin-bottom: 8px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ .estate-features li i {
+   color: var(--primary-color);
+   width: 16px;
+ }
+ 
+ .amenities {
+   margin-bottom: 25px;
+ }
+ 
+ .amenities h4 {
+   color: var(--secondary-color);
+   font-size: 16px;
+   font-weight: 600;
+   margin-bottom: 15px;
+ }
+ 
+ .amenities-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+ }
+ 
+ .amenity-tag {
+   background: #f0f8f0;
+   color: var(--secondary-color);
+   padding: 6px 12px;
+   border-radius: 15px;
+   font-size: 12px;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   border: 1px solid #e0e8e0;
+ }
+ 
+ .amenity-tag i {
+   color: var(--primary-color);
+ }
+ 
+ .estate-stats {
+   display: flex;
+   gap: 30px;
+   padding-top: 20px;
+   border-top: 1px solid #eee;
+ }
+ 
+ .stat {
+   text-align: center;
+ }
+ 
+ .stat-number {
+   display: block;
+   color: var(--primary-color);
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 1;
+ }
+ 
+ .stat-label {
+   color: #666;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+ }
+ 
+ /* --------------------------------------Development Process -------------------------------------- 
+ */
+
+ .development-process {
+   background: white;
+   padding: 4rem 0 6rem 0;
+   border-radius: 15px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+ }
+ 
+ .process-header {
+   text-align: center;
+   margin-bottom: 50px;
+ }
+ 
+ .process-header h3 {
+   color: var(--secondary-color);
+   font-size: 32px;
+   font-weight: 600;
+   margin-bottom: 15px;
+ }
+ 
+ .process-header p {
+   color: #666;
+   font-size: 16px;
+ }
+ 
+ .process-steps {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 40px;
+ }
+ 
+ .process-step {
+   text-align: center;
+   position: relative;
+ }
+ 
+ .step-number {
+   display: inline-block;
+   width: 60px;
+   height: 60px;
+   background: var(--primary-color);
+   color: white;
+   border-radius: 50%;
+   font-size: 20px;
+   font-weight: 700;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto 20px;
+   position: relative;
+ }
+ 
+ .step-content h4 {
+   color: var(--secondary-color);
+   font-size: 18px;
+   font-weight: 600;
+   margin-bottom: 10px;
+ }
+ 
+ .step-content p {
+   color: #666;
+   line-height: 1.5;
+   font-size: 14px;
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 1024px) {
+   .estates-grid {
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+     gap: 30px;
+   }
+   
+   .process-steps {
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 30px;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .estates-section {
+     padding: 60px 0;
+   }
+   
+   .estates-section .section-header h2 {
+     font-size: 32px;
+   }
+   
+   .estates-grid {
+     grid-template-columns: 1fr;
+     gap: 25px;
+   }
+   
+   .estate-content {
+     padding: 25px 20px;
+   }
+   
+   .estate-stats {
+     gap: 20px;
+   }
+   
+   .development-process {
+     padding: 40px 20px;
+   }
+   
+   .process-header h3 {
+     font-size: 24px;
+   }
+   
+   .process-steps {
+     grid-template-columns: 1fr;
+     gap: 25px;
+   }
+   
+   .amenities-grid {
+     gap: 6px;
+   }
+   
+   .amenity-tag {
+     font-size: 11px;
+     padding: 5px 10px;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .estate-header h3 {
+     font-size: 20px;
+   }
+   
+   .estate-description {
+     font-size: 14px;
+   }
+   
+   .step-number {
+     width: 50px;
+     height: 50px;
+     font-size: 18px;
+   }
+ }
+
+
+

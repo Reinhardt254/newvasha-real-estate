@@ -16,20 +16,19 @@
     />
 
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer/0.4.8/odometer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer/0.4.8/odometer.min.js"></script>
   </head>
   <body class="about-page">
     <!-- Header Section -->
@@ -62,10 +61,13 @@
             <li><a href="/about" class="active">About Us</a></li>
             <li><a href="/develop">Develop</a></li>
             <li><a href="/properties">Properties</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
-          <button class="quote-btn">Invest Now</button>
+                    <button class="quote-btn">
+            <a href="/contact">Invest Now</a>
+          </button>
+        </div>
         </div>
       </nav>
     </header>
@@ -154,7 +156,11 @@
                   <div class="vision-mission-content-text">
                     <h4>Our Mission</h4>
                     <p>
-                      To develop and deliver exceptional real estate projects that create lasting value for our clients and communities. We strive to set new standards in quality, innovation, and sustainability while maintaining the highest levels of integrity and professionalism in all our endeavors.
+                      To develop and deliver exceptional real estate projects
+                      that create lasting value for our clients and communities.
+                      We strive to set new standards in quality, innovation, and
+                      sustainability while maintaining the highest levels of
+                      integrity and professionalism in all our endeavors.
                     </p>
                   </div>
                 </div>
@@ -164,12 +170,16 @@
                 <div class="vision-mission-content">
                   <img
                     src="https://img.freepik.com/premium-photo/modern-residential-complex-with-green-areas-pathways-sunny-day_155027-11630.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_items_boosted&w=740"
-                    alt="Our Vision" 
+                    alt="Our Vision"
                   />
                   <div class="vision-mission-content-text">
                     <h4>Our Vision</h4>
                     <p>
-                      To be the leading real estate developer in East Africa, recognized for transforming skylines and creating sustainable communities that enhance people's lives. We envision a future where our developments serve as benchmarks for excellence in the industry.
+                      To be the leading real estate developer in East Africa,
+                      recognized for transforming skylines and creating
+                      sustainable communities that enhance people's lives. We
+                      envision a future where our developments serve as
+                      benchmarks for excellence in the industry.
                     </p>
                   </div>
                 </div>
@@ -184,7 +194,11 @@
                   <div class="vision-mission-content-text">
                     <h4>Our Values</h4>
                     <p>
-                      Excellence in every detail, integrity in all dealings, innovation in our approach, sustainability in our practices, and commitment to our clients and communities. These core values guide our decisions and shape our corporate culture.
+                      Excellence in every detail, integrity in all dealings,
+                      innovation in our approach, sustainability in our
+                      practices, and commitment to our clients and communities.
+                      These core values guide our decisions and shape our
+                      corporate culture.
                     </p>
                   </div>
                 </div>
@@ -212,34 +226,38 @@
           <div class="vision-grid">
             <div class="vision-item">
               <i class="fas fa-users"></i>
-              <h4>Expert Development Team </h4>
+              <h4>Expert Development Team</h4>
               <p>
-                Our highly skilled team of architects, engineers, and construction professionals 
-                brings decades of combined experience in real estate development and project management.
+                Our highly skilled team of architects, engineers, and
+                construction professionals brings decades of combined experience
+                in real estate development and project management.
               </p>
             </div>
             <div class="vision-item">
               <i class="fas fa-medal"></i>
-              <h4>Premium Quality Standards </h4>
+              <h4>Premium Quality Standards</h4>
               <p>
-                We source only the highest quality materials and work with trusted suppliers to ensure 
-                our developments meet international standards of excellence and durability.
+                We source only the highest quality materials and work with
+                trusted suppliers to ensure our developments meet international
+                standards of excellence and durability.
               </p>
             </div>
             <div class="vision-item">
               <i class="fas fa-building"></i>
-              <h4>Contemporary Design Excellence </h4>
+              <h4>Contemporary Design Excellence</h4>
               <p>
-                Our properties feature modern architectural designs, smart home technology, and 
-                sustainable features that create comfortable and efficient living spaces.
+                Our properties feature modern architectural designs, smart home
+                technology, and sustainable features that create comfortable and
+                efficient living spaces.
               </p>
             </div>
             <div class="vision-item">
               <i class="fas fa-handshake"></i>
-              <h4>Attractive Investment Returns </h4>
+              <h4>Attractive Investment Returns</h4>
               <p>
-                We offer competitive returns on investment through our various property options,
-                backed by our track record of successful developments and market appreciation.
+                We offer competitive returns on investment through our various
+                property options, backed by our track record of successful
+                developments and market appreciation.
               </p>
             </div>
           </div>
@@ -268,14 +286,14 @@
 
     <script>
       // Fetch the footer content
-      fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
+      fetch("/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
           // Insert the footer HTML
-          document.body.insertAdjacentHTML('beforeend', data);
+          document.body.insertAdjacentHTML("beforeend", data);
         })
-        .catch(error => {
-          console.error('Error loading footer:', error);
+        .catch((error) => {
+          console.error("Error loading footer:", error);
         });
     </script>
   </body>

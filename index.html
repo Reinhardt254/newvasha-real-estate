@@ -57,10 +57,13 @@
             <li><a href="/about">About Us</a></li>
             <li><a href="/develop">Develop</a></li>
             <li><a href="/properties">Properties</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
-          <button class="quote-btn">Invest Now</button>
+                    <button class="quote-btn">
+            <a href="/contact">Invest Now</a>
+          </button>
+        </div>
         </div>
       </nav>
     </header>
@@ -312,7 +315,9 @@
                     <blockquote>
                       "Newvasha delivers quality developments and investment
                       opportunities, with a focus on client satisfaction, modern
-                      infrastructure, and strategic locations. We are committed to providing the best services to our clients and we are always here to help you."
+                      infrastructure, and strategic locations. We are committed
+                      to providing the best services to our clients and we are
+                      always here to help you."
                     </blockquote>
                     <div class="testimonial-author">
                       <img
@@ -333,8 +338,9 @@
                   <div class="testimonial">
                     <blockquote>
                       "We offer a wide range of properties and land, with
-                      flexible options for buyers, tenants, and investors. 
-                      We are committed to providing the best services to our clients and we are always here to help you."
+                      flexible options for buyers, tenants, and investors. We
+                      are committed to providing the best services to our
+                      clients and we are always here to help you."
                     </blockquote>
                     <div class="testimonial-author">
                       <img
@@ -705,17 +711,15 @@
 
     <script>
       // Fetch the footer content
-      fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
+      fetch("/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
           // Insert the footer HTML
-          document.body.insertAdjacentHTML('beforeend', data);
+          document.body.insertAdjacentHTML("beforeend", data);
         })
-        .catch(error => {
-          console.error('Error loading footer:', error);
+        .catch((error) => {
+          console.error("Error loading footer:", error);
         });
     </script>
-
-
   </body>
 </html>
