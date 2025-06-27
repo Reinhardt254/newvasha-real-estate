@@ -494,13 +494,19 @@ button:hover {
 
 .e-text-path {
   position: absolute;
-  right: -8rem;
+  left: 45vw;
   top: -2rem;
   width: 120px;
   height: 120px;
   z-index: 10;
   background-color: transparent !important;
   padding: 1rem !important;
+}
+
+@media (max-width: 1024px) {
+  .e-text-path {
+    left: 50vw;
+  }
 }
 
 .e-text-path-link {
