@@ -23,7 +23,7 @@ body {
   color: var(--text-color);
 
   height: 100%;
-  width: 100%; 
+  width: 100%;
 }
 
 button {
@@ -45,7 +45,7 @@ button a {
   font-size: 1.15rem;
 }
 
-a{
+a {
   color: white;
 }
 
@@ -459,7 +459,7 @@ button:hover {
 }
 
 .circle path {
-  fill: transparent!important;
+  fill: transparent !important;
   stroke: var(--primary-color) !important;
   stroke-width: 13px !important;
   stroke-linecap: round !important;
@@ -498,28 +498,40 @@ button:hover {
   top: -2rem;
   width: 120px;
   height: 120px;
-
   z-index: 10;
-
   background-color: transparent !important;
-
   padding: 1rem !important;
+}
+
+.e-text-path-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  /* Safari compatibility */
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .e-text-path svg {
   width: 100%;
   height: 100%;
-
   overflow: visible !important;
   color: var(--white) !important;
-  transition: all 1s ease;
-  scale: 1.2;
-
+  transition: all 0.3s ease;
+  transform: scale(1.2);
   cursor: pointer;
+  /* Safari SVG rendering optimization */
+  -webkit-transform: scale(1.2);
+  -webkit-transition: all 0.3s ease;
 }
 
+.e-text-path-link:hover svg,
 .e-text-path svg:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
 }
 
 .e-text-path svg path {
@@ -532,27 +544,47 @@ button:hover {
   stroke-linejoin: miter !important;
   stroke-miterlimit: 10 !important;
   stroke-opacity: 1 !important;
-  stroke-width: 1 !important;
-  stroke-miterlimit: 10 !important;
   color: var(--primary-color) !important;
 }
 
-.e-text-path text textpath a {
-  text-decoration: none;
+.e-text-path text {
   font-weight: 500;
   font-size: 2rem !important;
-  padding: 0rem !important;
-  background-color: transparent !important;
-  color: var(--white) !important;
-
-  height: 100%;
-  width: 100%;
-
   fill: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  /* Safari text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  pointer-events: none;
 }
 
-.e-text-path text textpath a:hover {
-  color: var(--primary-color);
+.e-text-path textPath {
+  font-weight: 500;
+  font-size: 2rem !important;
+  fill: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  /* Safari textPath fix */
+  dominant-baseline: auto;
+  alignment-baseline: auto;
+}
+
+/* .e-text-path-link:hover text,
+.e-text-path-link:hover textPath {
+  fill: var(--white) !important;
+  color: var(--white) !important;
+} */
+
+/* Safari-specific fixes */
+@supports (-webkit-appearance: none) {
+  .e-text-path svg {
+    will-change: transform;
+  }
+
+  .e-text-path text,
+  .e-text-path textPath {
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+  }
 }
 
 @media (max-width: 1024px) {

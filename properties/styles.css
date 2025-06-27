@@ -16,7 +16,7 @@
   align-items: center;
   position: relative;
 }
- 
+
 .properties-page .hero::before {
   content: "";
   position: absolute;
@@ -101,7 +101,7 @@
 
 /* -----------------------------Featured Projects Section ----------------------------- */
 .featured-projects {
-  padding: 6rem 0 6rem 0;
+  padding: 6rem 0 3rem 0;
   background-color: var(--white);
 }
 
@@ -128,7 +128,6 @@
 
 .section-header .doted-line {
   width: auto;
-  
 }
 
 .section-header .subtitle {
@@ -269,7 +268,7 @@
 .on-sale .container {
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: start !important;
@@ -318,7 +317,7 @@
   min-width: 100px;
   backdrop-filter: blur(10px);
 
-  height: 10rem; 
+  height: 10rem;
   width: 100%;
 
   display: flex;
@@ -467,7 +466,6 @@
 }
 
 .recent-projects .container {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -500,10 +498,15 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   padding: 0 0 0 0;
+
+  /* Safari compatibility */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .recent-item:hover {
@@ -513,6 +516,11 @@
 .recent-image {
   width: 100%;
   height: 250px;
+  overflow: hidden;
+  position: relative;
+  /* Safari fix for image container */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .recent-image img {
@@ -520,6 +528,9 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  /* Safari image rendering fix */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .recent-item:hover .recent-image img {
@@ -528,14 +539,21 @@
 
 .recent-content {
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: auto;
   width: 100%;
+
+  /* Safari text visibility fix */
+  position: relative;
+  z-index: 2;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .recent-content h4 {
@@ -543,16 +561,29 @@
   color: var(--text-color);
   margin-bottom: 8px;
   font-weight: 600;
-  text-align: start;
+  text-align: left;
+
+  /* Safari text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 1;
+  visibility: visible;
 }
 
 .recent-content p {
   color: var(--dark-gray);
   font-size: 14px;
+
+  /* Safari text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 1;
+  visibility: visible;
+  line-height: 1.6;
 }
 
 .recent-content button {
-  width:auto;
+  width: auto;
   margin-top: 0rem;
   background: var(--secondary-color);
   color: var(--white);
@@ -575,7 +606,7 @@
   position: relative;
 }
 
-.properties-page .commission::before {  
+.properties-page .commission::before {
   content: "";
   position: absolute;
   top: 0;
@@ -645,6 +676,27 @@
   border-radius: 25px;
   font-weight: 500;
   cursor: pointer;
+}
+
+/* Safari-specific fixes for recent projects */
+@supports (-webkit-appearance: none) {
+  .recent-item {
+    /* Force Safari to render properly */
+    will-change: transform;
+  }
+
+  .recent-content {
+    /* Ensure text is always visible */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  .recent-content h4,
+  .recent-content p {
+    /* Force text rendering */
+    will-change: opacity;
+    -webkit-text-size-adjust: 100%;
+  }
 }
 
 /* Responsive Design */
