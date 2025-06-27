@@ -42,6 +42,10 @@ button a {
   font-size: 1.15rem;
 }
 
+a{
+  color: white;
+}
+
 button:hover {
   background-color: var(--primary-color) !important;
   opacity: 0.8 !important;
@@ -49,7 +53,7 @@ button:hover {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -333,6 +337,8 @@ button:hover {
   flex: 1;
 
   border: 1px solid var(--secondary-color);
+  border-radius: 30px !important;
+  color: var(--dark-gray);
 }
 
 .hero-form select {
