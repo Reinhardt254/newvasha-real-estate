@@ -52,7 +52,7 @@
 .properties-page h1 {
   font-size: 48px;
   margin: 0.5rem 0;
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 .properties-page p {

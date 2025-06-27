@@ -136,15 +136,11 @@ button:hover {
   color: var(--text-color);
   font-weight: 500;
   transition: color 0.3s;
-
-  padding-bottom: 0.5rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--primary-color);
-
-  border-bottom: 2px solid var(--primary-color);
 }
 
 .quote-btn {
@@ -163,92 +159,34 @@ button:hover {
 }
 
 /*------------------------------- Hero Section ------------------------------- */
-.home .hero {
-  background-color: var(--white);
-  background-image: url("https://newvashaepz.com/wp-content/uploads/2025/06/12343.png");
-  background-position: 58vw 0px;
-  background-repeat: no-repeat;
-  background-size: contain;
+.hero {
+  background: 
+    url("https://img.freepik.com/free-photo/multi-racial-builders-standing-outdoors-back-view-wearing-uniform-talking-about-new-glass-building-working-poject-city-infrastructure_1157-50888.jpg?uid=R146131911&ga=GA1.1.987641957.1730710896&semt=ais_hybrid&w=740");
+  background-size: cover;
+  background-position: center;
   padding: 100px 0;
   color: var(--white);
   position: relative;
-  overflow: hidden;
 }
 
-/* Background overlay for the construction crane image */
-.home .hero::before {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff00;
-  background-image: url("https://gajean.com/agen/wp-content/uploads/sites/23/2022/11/construction-with-construction-cranes-1.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.6;
-  mix-blend-mode: screen;
-  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  background: linear-gradient(to right, #395144, #39514400);
+  opacity: 100%;
   z-index: 1;
 }
 
-@media (min-width: 1025px) {
-  .hero::before {
-    background-attachment: fixed;
-  }
-}
-
-.hero .container {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-}
-
-.hero-image-container {
-  width: 100%;
-  height: 90%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  opacity: 0.9;
-  z-index: 10;
-  position: relative;
-}
-
-.hero-content-container {
-  position: relative;
-  z-index: 10;
-}
-
 .hero-content {
-  max-width: 800px;
+  max-width: 600px;
   margin-bottom: 50px;
 
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 .hero-content h1 {
@@ -256,15 +194,6 @@ button:hover {
   margin-bottom: 0px;
   font-weight: 600;
   color: var(--primary-color);
-}
-
-.hero-content h2 {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: start;
-  color: var(--secondary-color) !important;
-
-  padding-bottom: 1rem;
 }
 
 .hero-swiper {
@@ -294,19 +223,12 @@ button:hover {
   font-size: 48px;
   font-weight: 600;
   text-align: start;
-  color: var(--secondary-color);
+  color: var(--white);
   padding-bottom: 1rem;
 }
 
 .hero-swiper .swiper-slide-active h2 {
   animation: zoomIn 0.5s ease-in-out !important;
-}
-
-.hero-content-text {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: start;
-  color: var(--secondary-color) !important;
 }
 
 @keyframes zoomIn {
@@ -357,12 +279,6 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  width: auto;
 }
 
 .hero-form button:hover {
@@ -375,7 +291,7 @@ button:hover {
   margin-top: 50px;
   width: 50%;
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 .stat-box {
@@ -395,152 +311,13 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-.stat-box p {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  color: var(--secondary-color) !important;
-}
-
-.left.circle {
-  position: absolute;
-  top: 0rem;
-  left: -8rem;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.right.circle {
-  position: absolute;
-  top: -7%;
-  left: 18%;
-  width: 50px;
-  height: 50px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.bottom.circle {
-  position: absolute;
-  top: 0%;
-  left: 28%;
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.circle svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible !important;
-}
-
-.circle path {
-  fill: transparent!important;
-  stroke: var(--primary-color) !important;
-  stroke-width: 13px !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-  opacity: 0.3;
-}
-
-.left.circle path {
-  stroke: var(--secondary-color) !important;
-}
-
-.right.circle path {
-  stroke-width: 40px !important;
-  opacity: 0.4;
-  stroke: #ebb41d !important;
-}
-
-.bottom.circle path {
-  stroke-width: 50px !important;
-  stroke: var(--secondary-color) !important;
-  opacity: 0.4;
-}
-
-/* ------------------------------- Odometer specific styles ------------------------------- */
+/* Odometer specific styles */
 .odometer {
   font-family: "Poppins", sans-serif !important;
   font-size: 48px !important;
   font-weight: 600 !important;
   color: var(--primary-color) !important;
   transition: all 0.3s ease;
-}
-
-.e-text-path {
-  position: absolute;
-  right: -8rem;
-  top: -2rem;
-  width: 120px;
-  height: 120px;
-
-  z-index: 10;
-
-  background-color: transparent !important;
-
-  padding: 1rem !important;
-}
-
-.e-text-path svg {
-  width: 100%;
-  height: 100%;
-
-  overflow: visible !important;
-  color: var(--white) !important;
-  transition: all 1s ease;
-  scale: 1.2;
-
-  cursor: pointer;
-}
-
-.e-text-path svg:hover {
-  transform: scale(1.2);
-}
-
-.e-text-path svg path {
-  fill: transparent !important;
-  stroke: transparent !important;
-  stroke-width: 0 !important;
-  stroke-dasharray: 0 !important;
-  stroke-dashoffset: 0 !important;
-  stroke-linecap: butt !important;
-  stroke-linejoin: miter !important;
-  stroke-miterlimit: 10 !important;
-  stroke-opacity: 1 !important;
-  stroke-width: 1 !important;
-  stroke-miterlimit: 10 !important;
-  color: var(--primary-color) !important;
-}
-
-.e-text-path text textpath a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 2rem !important;
-  padding: 0rem !important;
-  background-color: transparent !important;
-  color: var(--white) !important;
-
-  height: 100%;
-  width: 100%;
-
-  fill: var(--primary-color) !important;
-}
-
-.e-text-path text textpath a:hover {
-  color: var(--primary-color);
 }
 
 @media (max-width: 1024px) {
@@ -1041,7 +818,7 @@ button:hover {
 }
 
 .testimonial-author img {
-  width: 70px;
+  width:70px;
   height: 70px;
   border-radius: 50%;
   margin-bottom: 10px;
@@ -1364,6 +1141,7 @@ button:hover {
   margin-top: 4rem !important;
 }
 
+
 @media (max-width: 1024px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1387,6 +1165,7 @@ button:hover {
     padding: 20px;
   }
 }
+
 
 /* ------------------------------- Blog Section ------------------------------- */
 
