@@ -471,6 +471,8 @@
 .recent-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 40px;
 
@@ -502,7 +504,7 @@
 
 .recent-image {
   width: 100%;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
 }
 
